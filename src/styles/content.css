@@ -1,0 +1,22 @@
+#content {
+  background-color: #f4f2f0;
+  flex: 1 0 auto;
+  padding: 1em;
+}
+#content p > b {
+  display: inline-block;
+  padding-bottom: 0.4em;
+}
+#content li {
+  margin-bottom: 0.4em;
+}
+@media (min-width: 30em) {
+  #content {
+    padding: 1.25em 1.5em;
+  }
+}
+@media (min-width: 42em) {
+  #content {
+    padding: 1.5em 2em;
+  }
+}

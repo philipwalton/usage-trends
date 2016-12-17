@@ -1,0 +1,75 @@
+.root {
+  align-items: flex-start;
+  background: hsl(0, 60%, 50%);
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.4);
+  color: #fff;
+  display: flex;
+  padding: 1.5em;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  transition: transform .2s cubic-bezier(.4,0,.2,1);
+}
+
+._enter {
+  transform: translate3d(0, -100%, 0);
+
+}
+
+._enterActive {
+  transform: translate3d(0, 0, 0);
+}
+
+._leave {
+  transform: translate3d(0, 0, 0);
+}
+
+._leaveActive {
+  transform: translate3d(0, -100%, 0);
+}
+
+
+.icon {
+  font-size: 3em;
+}
+
+
+.close {
+  background: none;
+  border: 0;
+  font-size: 1.5em;
+  opacity: .4;
+  padding: .5em;
+}
+.close:active,
+.close:focus,
+.close:hover {
+  opacity: 1;
+  outline: 0;
+}
+
+.body {
+  flex: 1 0 0%;
+  margin: 0 1.5em;
+}
+
+.title {
+  color: inherit;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.message {
+  margin-top: .4em;
+  opacity: .7;
+}
+
+@media (min-width: 48em) {
+  .root {
+    padding: 2em;
+  }
+  .body {
+    margin: 0 2em;
+  }
+}

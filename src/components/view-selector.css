@@ -1,0 +1,9 @@
+.root {
+  display: block;
+}
+
+.item {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+}

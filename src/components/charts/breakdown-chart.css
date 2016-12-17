@@ -1,0 +1,4 @@
+.root {
+  composes: root from './trend-chart.css';
+  height: 500px;
+}

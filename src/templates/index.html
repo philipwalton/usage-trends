@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible content=IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usage Trends</title>
+  <link rel="preload" as="script" href="https://apis.google.com/js/client:platform.js">
+  <meta name="google-signin-client_id" content="147139794996-8hj856t7l7as37adi34b1m6rr3idu4n8.apps.googleusercontent.com">
+  <meta name="google-signin-scope" content="https://www.googleapis.com/auth/analytics.readonly">
+  <script>addEventListener('error', window.__e=function f(e){f.q=f.q||[];f.q.push(e)});</script>
+  <style>{{head}}</style>
+</head>
+<body>
+  <header>
+    <h1>
+      Usage Trends
+      <i>for</i>
+      <img src="ga-logo.svg" alt="Google Analytics">
+    </h1>
+    <nav>
+      <a
+        href="#about"
+        data-on="click"
+        data-event-category="Anchor Links"
+        data-event-action="click"
+        data-event-label="about">
+        About this tool
+      </a>
+      <a
+        href="#faqs"
+        data-on="click"
+        data-event-category="Anchor Links"
+        data-event-action="click"
+        data-event-label="faqs">
+        FAQs
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div id="app">
+      <style>{{loader}}</style>
+      <div id="loading-indicator">
+        <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" stroke-dasharray="180 120" stroke="#ef7909" fill="none" stroke-width="12"></circle></svg>
+      </div>
+    </div>
+    <div id="content">
+      <style>{{content}}</style>
+      <section id="about">
+        <h2>About this tool</h2>
+        <p>Google Analytics is good at showing you raw numbers and letting you see how those numbers break down across all the dimensions you care about. What it's not always good at is showing you how those numbers are <em>trending</em> over time.</p>
+        <p>Usage Trends is tool that makes it easier to visualize trends in your Google Analytics data. It does this by displaying your dimensions <em>as a percentage of the total</em> rather than just as raw numbers, which is critical when traffic fluctuates.</p>
+        <p>This tool helps you answer questions like:</p>
+        <ul>
+          <li><strong>Is my mobile usage growing faster than my desktop usage?</strong></li>
+          <li><strong>Is the usage of legacy browsers/platforms trending down or staying constant?</strong></li>
+          <li><strong>Is traffic from other countries increasing? If so, how quickly?</strong></li>
+        </ul>
+        <p>Looking at raw numbers is interesting, but looking at trends is actionable. Trends tell you how to plan for the future and make sure you're ready for it.</p>
+      </section>
+      <section id="faqs">
+        <h2>Frequently asked questions</h2>
+        <p>
+          <b>Can I use custom dimensions and metrics in a trend report?</b><br>
+          Yes! Just make sure you've selected the property where you've defined the custom dimension or metric.
+        </p>
+        <p>
+          <b>Why are some metrics (e.g. <i>Bounce Rate</i>) missing from the list?</b><br>
+          Usage Trends converts metric totals into percentages of those totals broken down by dimension. Metrics like <i>Bounce Rate</i> that are derived from other metrics (e.g. <i>Bounces</i> / <i>Sessions</i>) are excluded because they wouldn't make sense in a trend report.
+        </p>
+        <p>
+          <b>Why do the results sometimes add up to more than 100%?</b><br>
+          Not all dimensions and metrics can be meaningfully queried together. For example, the <i>User Type</i> dimension is a session-level dimensions (since a user can be a "New Visitor" one sessions and a "Returning Visitor" the next). If you try to create a trend report for the <i>User Type</i> dimension with the <i>Users</i> metric, you'll get unexpected results since some users will be counted twice.
+        </p>
+      </section>
+    </div>
+  </main>
+  <footer id="spread-the-word">
+    <style>{{footer}}</style>
+    <p>
+      <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=philipwalton&repo=usage-trends&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="A showcase of traditionally hard CSS problems, easily solved using flexbox." data-url="https://philipwalton.github.io/usage-trends/" data-count="horizontal" data-via="philwalton" data-related="philwalton:Creator of Solved by Flexbox">Tweet</a>
+      <a href="https://twitter.com/philwalton" class="twitter-follow-button" data-show-count="true" data-lang="en">@philwalton</a>
+    </p>
+    <p>
+      <span>Created and maintained by <a href="https://philipwalton.com">Philip Walton</a>.</span>
+      <span>Source code released under the <a href="https://github.com/philipwalton/usage-trends/blob/master/LICENSE">MIT</a> license.</span>
+      <span>Site design licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span>
+    </p>
+  </footer>
+  <script async src="main.js"></script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" id="twitter-wjs"></script>
+</body>
+</html>

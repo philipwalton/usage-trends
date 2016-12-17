@@ -1,0 +1,17 @@
+.root {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 700;
+  margin: 0 0 .3em 0;
+}
+
+.body {
+  flex: 1 0 0%;
+}
+

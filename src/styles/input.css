@@ -1,0 +1,17 @@
+.root {
+  /*background: hsla(0,0%,0%, .075);*/
+  border: 1px solid transparent;
+  border-radius: .2em;
+  box-sizing: border-box;
+  color: inherit;
+  /*cursor: pointer;*/
+  display: inline-block;
+  font: inherit;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: .4em 1em;
+  transition: background-color .2s cubic-bezier(.4,0,.2,1),
+              border-color .2s cubic-bezier(.4,0,.2,1);
+  /*width: 100%;*/
+}
+

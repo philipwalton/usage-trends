@@ -1,0 +1,24 @@
+.root {
+  composes: root from './input.css';
+  background: hsl(150, 50%, 55%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.root:disabled {
+  opacity: .6;
+}
+
+.root:active:enabled,
+.root:focus:enabled,
+.root:hover:enabled {
+  background: hsl(150, 50%, 45%);
+  outline: none;
+  text-decoration: none;
+}
+
+._big {
+  font-size: 1.2em;
+  padding: 1em 3em;
+  width: auto;
+}

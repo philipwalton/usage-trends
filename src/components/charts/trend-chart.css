@@ -1,0 +1,10 @@
+.root {
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 0.5em hsla(0,0%,0%,0.1);
+  padding: 1em;
+  margin: 2em auto;
+  max-width: 1200px;
+  width: 100%;
+}
+

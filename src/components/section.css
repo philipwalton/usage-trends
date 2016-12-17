@@ -1,0 +1,42 @@
+.root {
+  opacity: 1;
+  padding: 1em;
+}
+
+.wrapper {
+  max-width: 48em;
+  margin: 0 auto;
+}
+
+._wide .wrapper {
+  max-width: 64em;
+}
+
+._full .wrapper {
+  max-width: initial;
+}
+
+._alt {
+  background-color: #f4f2f0;
+}
+
+._nogap {
+  margin-bottom: -2em;
+}
+
+._shadow {
+  box-shadow: 0 0 0.6em rgba(0,0,0,.1);
+  position: relative;
+}
+
+
+@media (min-width: 30em) {
+  .root {
+    padding: 1.25em 1.5em;
+  }
+}
+@media (min-width: 42em) {
+  .root {
+    padding: 1.5em 2em;
+  }
+}

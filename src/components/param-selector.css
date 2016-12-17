@@ -1,0 +1,25 @@
+.root {
+  display: block;
+}
+
+.item {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.item:last-child {
+  display: flex;
+}
+
+.dateRange {
+  flex: 2 0 0;
+}
+
+.maxResults {
+  flex: 1 0 0;
+  margin-left: 1em;
+}
+
+
+

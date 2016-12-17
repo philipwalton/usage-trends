@@ -1,0 +1,27 @@
+.signInPrompt {
+  align-items: center;
+  background-color: hsl(33, 100%, 58%);
+  box-shadow: 0 0 0.5em hsla(0,0%,0%,0.2);
+  color: #fff;
+  display: flex;
+  flex-flow: column;
+  padding: 1.5em 1em 0;
+  position: relative;
+}
+
+.signInPromptMessage {
+  max-width: 28em;
+  text-align: center;
+}
+
+@media (min-width: 30em) {
+  .signInPrompt {
+    padding: 1.5em 1.5em 0;
+  }
+}
+
+@media (min-width: 42em) {
+  .signInPrompt {
+    padding: 2em 1.5em 0.5em;
+  }
+}

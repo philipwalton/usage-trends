@@ -1,0 +1,16 @@
+#loading-indicator {
+  margin: 5em;
+  text-align: center;
+}
+#loading-indicator svg {
+  animation: spin 1.25s linear infinite, fadeIn 1s linear 1;
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 100;}
+}

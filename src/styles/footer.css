@@ -1,0 +1,41 @@
+footer {
+  background: #404040;
+  box-shadow: inset 0 0.5em 0.5em -0.5em hsla(0,0%,0%,0.3);
+  color: hsl(0, 0%, 60%);
+  flex: none;
+  padding: 1.5em;
+  text-align: center;
+}
+
+footer a {
+  padding-bottom: 1px;
+  border: 0;
+  color: hsl(0, 0%, 90%);
+}
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p:first-of-type a,
+footer p:first-of-type iframe {
+  display: inline-block;
+  margin: 0 0.5em 1em;
+  vertical-align: top;
+}
+
+footer p:last-of-type > span {
+  display: block;
+  font-size: 0.85em;
+}
+
+@media (min-width: 36em) {
+  footer p:last-of-type > span {
+    display: inline-block;
+    margin: 0 0.25em;
+  }
+}
