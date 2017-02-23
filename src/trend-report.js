@@ -11,6 +11,7 @@ export const create = ({viewId, metric, dimension, maxResults, dateRange}) => {
     metrics,
     dimensions: [{name: dimension}],
     orderBys: [{fieldName: metric, sortOrder: 'DESCENDING'}],
+    includeEmptyRows: true,
     pageSize: maxResults,
   });
 
@@ -20,6 +21,7 @@ export const create = ({viewId, metric, dimension, maxResults, dateRange}) => {
     metrics,
     dimensions: [{name: 'ga:nthWeek'}],
     orderBys: [{fieldName: metric, sortOrder: 'DESCENDING'}],
+    includeEmptyRows: true,
     pageSize: 10000,
   });
 
@@ -45,6 +47,7 @@ export const create = ({viewId, metric, dimension, maxResults, dateRange}) => {
         }],
       }],
       orderBys: [{fieldName: 'ga:nthWeek', sortOrder: 'ASCENDING'}],
+      includeEmptyRows: true,
       pageSize: 10000,
     });
 
@@ -91,16 +94,22 @@ const extractReportResults = (topDimensions, periodTotals, report) => {
     breakdownRowData[dimension] = [['Weeks ago', dimension]];
   }
 
-  // Add the rows.
-  const lastPeriod = periodMap.size - 1;
-  for (const [period, entry] of periodMap) {
+  // Note: use periodTotals to get a continuous list of all periods, as
+  // periodMap may have holes in it due to missing dimension values.
+  const periods = Object.keys(periodTotals);
+  const lastPeriod = periods.length - 1;
+
+  for (let period of periods) {
+    period = parseInt(period, 10);
+    const entry = periodMap.get(period) || {};
     const periodData = {v: period, f: `${lastPeriod - period}`};
     const aggregateRow = [periodData];
     const breakdownRow = {};
 
     for (const dimension of topDimensions) {
       const percentage = Math.min(Math.max(
-          entry[dimension] / periodTotals[period], 0), 1) || null;
+          (entry[dimension] || 0) / periodTotals[period], 0), 1) || 0;
+
       const percentageData = {
         v: percentage,
         f: `${parseFloat((percentage * 100).toFixed(2))}%`,
